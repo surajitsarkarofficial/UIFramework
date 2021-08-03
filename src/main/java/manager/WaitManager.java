@@ -27,4 +27,9 @@ public class WaitManager {
         wait = new WebDriverWait(DriverManager.getInstance().getDriver(),10);
         return wait.until(ExpectedConditions.elementToBeClickable(element));
     }
+    public static WebElement WaitForElementToBePresent(By element)
+    {
+        wait = new WebDriverWait(DriverManager.getInstance().getDriver(),10);
+        return wait.until(ExpectedConditions.presenceOfElementLocated(element));
+    }
 }

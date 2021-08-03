@@ -3,6 +3,7 @@ package pages;
 import base.BasePage;
 import manager.ActionManager;
 import manager.DriverManager;
+import manager.WaitManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,7 +16,7 @@ public class AccessoriesPage extends BasePage {
     private final By accessories = By.xpath("//*[@class='ast-woo-product-category'][contains(text(),'Accessories')]");
     private final By allProducts = By.xpath("//*[@class='ast-woo-product-category']");
     private final By productsAddToCart = By.xpath("//*[contains(@class,'product_type_simple add_to_cart_button')][text()='Add to cart']");
-    private final By viewCartLink = By.linkText("View cart");
+    private final By viewCartLink = By.xpath("//a[@title='View cart']");
 
     @Override
     public boolean isPageLoaded() {
@@ -41,7 +42,7 @@ public class AccessoriesPage extends BasePage {
 
     public CartPage clickViewCartLink()
     {
-        click(DriverManager.getInstance().getDriver().findElements(viewCartLink).get(0));
+        click(viewCartLink);
         return new CartPage();
     }
 

@@ -3,14 +3,14 @@ package manager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import static manager.WaitManager.WaitForElementToBeClickable;
 import static manager.DriverManager.getInstance;
-import static manager.WaitManager.WaitForElementToBeVissible;
+import static manager.WaitManager.*;
 
 public class ActionManager {
 
     public static void click(By element)
     {
+        WaitForElementToBePresent(element);
         WaitForElementToBeClickable(element);
         getInstance().getDriver().findElement(element).click();
     }
