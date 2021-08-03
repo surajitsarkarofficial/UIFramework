@@ -1,5 +1,6 @@
 package base;
 import manager.DriverManager;
+import manager.PropertyManager;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
@@ -19,7 +20,7 @@ public class BaseTest {
             browser=_browser;
         }
         DriverManager.getInstance().startDriver(browser);
-        DriverManager.getInstance().getDriver().get("https://www.askomdch.com");
+        DriverManager.getInstance().getDriver().get(PropertyManager.getInstance().getProperty("app.url").toString());
     }
 
     @AfterMethod
