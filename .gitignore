@@ -1,3 +1,4 @@
 .idea
 target/
 BasicUIFramework.iml
+.DS_Store
