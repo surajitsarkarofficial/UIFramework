@@ -1,10 +1,7 @@
 package pages.components;
 
 import base.BasePage;
-import org.jsoup.Connection;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import pages.StorePage;
 import static manager.ActionManager.*;
 public class SearchProduct extends BasePage {
 

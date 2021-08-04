@@ -23,7 +23,7 @@ public class BaseTest {
         DriverManager.getInstance().getDriver().get(PropertyManager.getInstance().getProperty("app.url").toString());
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void afterMethod()
     {
         DriverManager.getInstance().getDriver().quit();

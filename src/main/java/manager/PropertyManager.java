@@ -1,31 +1,34 @@
 package manager;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.Objects;
 import java.util.Properties;
 
 public class PropertyManager {
 
-    private PropertyManager()
-    {
-
-    }
     private static Properties properties;
     private static PropertyManager propertyManager = new PropertyManager();
-    static {
-        String filePath = "src/test/resources/application.properties";
+
+    static{
         properties = new Properties();
         try {
-
-            properties.load(new FileReader(filePath));
-
+            properties.load(new
+                    FileReader("src/test/config/application.properties"));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
-            throw new RuntimeException("Failed to load Properties file found at " + filePath);
+            throw new RuntimeException("Failed to load Properties file .");
         }
     }
 
+    private PropertyManager() {
+
+    }
     public static PropertyManager getInstance()
     {
         return propertyManager;
