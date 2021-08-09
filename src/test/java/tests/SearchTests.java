@@ -17,8 +17,8 @@ public class SearchTests extends BaseTest {
         StorePage storePage =new HomePage().navigateToStorePage();
         SearchResults searchResults =storePage.getSearchProduct().searchProduct("Jeans");
         String actText = searchResults.getTextForSearchResultsCountLabel();
-        String expText = "Showing all ";
-        Assert.assertTrue(actText.contains(expText),"Actual Message was - "+ actText);
+        String expText = "Showing all items";
+        Assert.assertTrue(actText.contains(expText),"Actual Message  - '"+ actText +"' does not contains expected message '"+expText+"'.\n");
 
     }
 

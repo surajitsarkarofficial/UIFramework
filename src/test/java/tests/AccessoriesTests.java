@@ -2,8 +2,10 @@ package tests;
 
 import base.BaseTest;
 import com.google.common.util.concurrent.Uninterruptibles;
+import enums.ReportLog;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import manager.DriverManager;
+import manager.ReportManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -25,6 +27,7 @@ public class AccessoriesTests extends BaseTest {
         int totalAccProduct = accessoriesPage.getCountOfAccessories();
         int totalProductsListed = accessoriesPage.getCountOfAllProducts();
         Assert.assertEquals(totalAccProduct,totalProductsListed);
+        ReportManager.getInstance().getReportType().log(ReportLog.PASS,"Only accessories products listed verification was successful.");
     }
     @Test
     public void addProductToCart()

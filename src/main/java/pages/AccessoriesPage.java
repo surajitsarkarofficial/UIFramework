@@ -1,8 +1,10 @@
 package pages;
 
 import base.BasePage;
+import enums.ReportLog;
 import manager.ActionManager;
 import manager.DriverManager;
+import manager.ReportManager;
 import manager.WaitManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -37,12 +39,14 @@ public class AccessoriesPage extends BasePage {
     {
         List<WebElement> accessoriesList = DriverManager.getInstance().getDriver().findElements(productsAddToCart);
         click(accessoriesList.get(index));
+        ReportManager.getInstance().getReportType().log(ReportLog.INFO,"Accessories at index "+index+" is added to cart");
         return this;
     }
 
     public CartPage clickViewCartLink()
     {
         click(viewCartLink);
+        ReportManager.getInstance().getReportType().log(ReportLog.INFO,"Clicked on View Cart link.");
         return new CartPage();
     }
 

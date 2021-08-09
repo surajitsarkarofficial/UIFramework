@@ -3,3 +3,4 @@ target/
 BasicUIFramework.iml
 .DS_Store
 test-output/
+Reports/
