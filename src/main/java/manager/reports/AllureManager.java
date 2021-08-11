@@ -9,10 +9,10 @@ public class AllureManager implements IReportManager {
         return this;
     }
 
-    @Override
-    public Object getReport() {
-        return null;
-    }
+   // @Override
+    //public Object getReport() {
+    //    return null;
+    //}
 
     @Override
     public void createTest(String testName) {
@@ -25,7 +25,12 @@ public class AllureManager implements IReportManager {
     }
 
     @Override
-    public void log(Enum e, String message) {
+    public void log(Enum e, String msg) {
 
+    }
+
+    @Override
+    public Object getTest() {
+        return null;
     }
 }
