@@ -1,0 +1,12 @@
+{
+  "dataset": [
+    {
+      "productName": "Jeans",
+      "expectedText": "Showing all"
+    },
+    {
+      "productName": "Shoes",
+      "expectedText": "Showing all"
+    }
+  ]
+}

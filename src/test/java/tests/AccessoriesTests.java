@@ -27,7 +27,6 @@ public class AccessoriesTests extends BaseTest {
         int totalAccProduct = accessoriesPage.getCountOfAccessories();
         int totalProductsListed = accessoriesPage.getCountOfAllProducts();
         Assert.assertEquals(totalAccProduct,totalProductsListed);
-        ReportManager.getInstance().getReportType().log(ReportLog.PASS,"Only accessories products listed verification was successful.");
     }
     @Test
     public void addProductToCart()
