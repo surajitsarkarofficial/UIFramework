@@ -1,5 +1,7 @@
 package manager;
 
+import commons.FrameworkConstants;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -17,7 +19,7 @@ public class PropertyManager {
         properties = new Properties();
         try {
             properties.load(new
-                    FileReader("src/test/config/application.properties"));
+                    FileReader(FrameworkConstants.APPLICATION_PROP_PATH));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
