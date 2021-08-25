@@ -5,8 +5,8 @@ This is a framework which supports Web UI Automation.<br>
 - Testing Lib - Selenium <br>
 - Testing F/W - TestNg <br>
 - Reporting - Extent Report <br>
+- Containerization - Docker <br>
 - Build Tool - Maven <br>
-- Docker<br>
 ## Features - 
 This framework is something that I am currently developing and is in progress.<br>
 1. I have tried to incorporate my learning so far and tried to implement the automation best practices in a nutshell. <br>
