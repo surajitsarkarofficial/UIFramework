@@ -17,7 +17,7 @@ This framework is something that I am currently developing and is in progress.<b
 6. Multiple browser support.
 7. I have also added a provision that after every code change, docker images will be created and pushed to the docker hub.<br>
 8. Implemented static blocks to read properties.<br><br>
-## Coming Next - 
+## Comingup Next - 
 1. Complete CI/CD implementation using Jenkins.<br>
 2. Support for Cloud Service providers like Browser stack, Sauce Labs.<br>
 3. Integrating Image comparisons using Applitools.<br>
